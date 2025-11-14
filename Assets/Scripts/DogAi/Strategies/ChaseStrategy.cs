@@ -1,24 +1,24 @@
+using System;
 using Models;
 using UnityEngine;
 using Utility;
 
 namespace DogAi.Strategies
 {
+    [Serializable]
     public class ChaseStrategy : IHerdingStrategy
     {
         private readonly Transform _dog;
         private readonly Transform[] _sheep;
         private readonly Pen _pen;
-        private readonly float _dogMoveSpeed;
-        private readonly float _dogTurnSpeed;
+        private readonly DogConfig _dogConfig;
 
-        public ChaseStrategy(Transform dog, Transform[] sheep, Pen pen, float dogMoveSpeed, float dogTurnSpeed)
+        public ChaseStrategy(Transform dog, Transform[] sheep, Pen pen, DogConfig dogConfig)
         {
             _dog = dog;
             _sheep = sheep;
             _pen = pen;
-            _dogMoveSpeed = dogMoveSpeed;
-            _dogTurnSpeed = dogTurnSpeed;
+            _dogConfig = dogConfig;
         }
 
         public void Execute()
@@ -31,7 +31,7 @@ namespace DogAi.Strategies
             var targetPosition = furthestFromPen.position + offset;
             
             Debug.DrawLine(_dog.position, targetPosition, Color.black);
-            _dog.MoveTowards(targetPosition, _dogMoveSpeed, _dogTurnSpeed);
+            _dog.MoveTowards(targetPosition, _dogConfig.MoveSpeed, _dogConfig.TurnSpeed);
         }
     }
 }
