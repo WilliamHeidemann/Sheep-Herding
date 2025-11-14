@@ -1,9 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/ButtonStyle.uss?fileID=7433441132597879392&amp;guid=7a13090c3eb1c8c46a76eafb2dd24536&amp;type=3#ButtonStyle" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center; align-items: flex-end; padding-bottom: 4px;">
-        <ui:Button text="Go By" class="button-style" />
-        <ui:Button text="Away To Me" class="button-style" />
-        <ui:Button text="Walk Up" class="button-style" />
-        <ui:Button text="Lie Down" class="button-style" />
+        <ui:Button text="Circle" class="button-style" />
+        <ui:Button text="Chase" class="button-style" />
+        <ui:Button text="Wait" class="button-style" />
+        <ui:Button text="Return" class="button-style" />
     </ui:VisualElement>
 </ui:UXML>

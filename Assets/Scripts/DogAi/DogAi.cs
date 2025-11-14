@@ -12,7 +12,7 @@ namespace DogAi
 
         private void Awake()
         {
-            HerdingStrategy = _strategyFactory.CreateStrategy(Command.ChaseSheep);
+            HerdingStrategy = _strategyFactory.CreateStrategy(Command.Return);
             _commandRegistry.Subscribe(ReadCommand);
         }
 

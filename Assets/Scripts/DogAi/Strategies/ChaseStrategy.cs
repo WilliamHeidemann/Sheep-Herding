@@ -31,7 +31,16 @@ namespace DogAi.Strategies
             var targetPosition = furthestFromPen.position + offset;
             
             Debug.DrawLine(_dog.position, targetPosition, Color.black);
-            _dog.MoveTowards(targetPosition, _dogConfig.MoveSpeed, _dogConfig.TurnSpeed);
+            
+            if (Vector3.Distance(_dog.position, targetPosition) < 1f)
+            {
+                Vector3 targetRotation = furthestFromPen.position - _dog.position;
+                _dog.RotateTowards(targetRotation, _dogConfig.TurnSpeed);
+            }
+            else
+            {
+                _dog.MoveTowards(targetPosition, _dogConfig.MoveSpeed, _dogConfig.TurnSpeed);
+            }
         }
     }
 }

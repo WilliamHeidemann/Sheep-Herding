@@ -23,6 +23,17 @@ namespace Utility
             transform.position += newDirection * moveSpeed;
         }
         
+        public static void RotateTowards(this Transform transform, Quaternion target, float turnSpeed)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, turnSpeed * Time.deltaTime);
+        }
+        
+        public static void RotateTowards(this Transform transform, Vector3 target, float turnSpeed)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(target);
+            transform.RotateTowards(targetRotation, turnSpeed);
+        }
+        
         public static T MinBy<T>(this IEnumerable<T> source, System.Func<T, float> selector)
         {
             T minItem = default;

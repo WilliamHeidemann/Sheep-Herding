@@ -15,30 +15,30 @@ namespace View
             var root = _uiDocument.rootVisualElement;
 
             var buttons = root.Query<Button>().ToList();
-            buttons[0].clicked += ClockWise;
-            buttons[1].clicked += CounterClockWise;
-            buttons[2].clicked += ChaseSheep;
-            buttons[3].clicked += LieDown;
+            buttons[0].clicked += ButtonOne;
+            buttons[1].clicked += ButtonTwo;
+            buttons[2].clicked += ButtonThree;
+            buttons[3].clicked += ButtonFour;
         }
         
-        private void ClockWise()
+        private void ButtonOne()
         {
-            _commandRegistry.IssueCommand(Command.ClockWise);
+            _commandRegistry.IssueCommand(Command.Circle);
         }
 
-        private void CounterClockWise()
+        private void ButtonTwo()
         {
-            _commandRegistry.IssueCommand(Command.CounterClockWise);
+            _commandRegistry.IssueCommand(Command.Chase);
         }
 
-        private void ChaseSheep()
+        private void ButtonThree()
         {
-            _commandRegistry.IssueCommand(Command.ChaseSheep);
+            _commandRegistry.IssueCommand(Command.Wait);
         }
         
-        private void LieDown()
+        private void ButtonFour()
         {
-            _commandRegistry.IssueCommand(Command.LieDown);
+            _commandRegistry.IssueCommand(Command.Return);
         }
     }
 }
