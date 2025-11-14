@@ -1,7 +1,7 @@
 .button-style {
     border-radius: 8px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-top-width: 4px;
     border-right-width: 4px;
     border-bottom-width: 4px;

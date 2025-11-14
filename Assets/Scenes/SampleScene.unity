@@ -2749,9 +2749,93 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 40cf0f235cafced498aa91e0bb9c4def, type: 2}
     - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dog
+      value: 
+      objectReference: {fileID: 650677558}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dogMoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dogTurnSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._pen.CenterOfPen
+      value: 
+      objectReference: {fileID: 228051186}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._sheep.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8714958569153952005}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[1]'
+      value: 
+      objectReference: {fileID: 931052175}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2137017362}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1294834539}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1215737794}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1321778977}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[6]'
+      value: 
+      objectReference: {fileID: 280026318}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[7]'
+      value: 
+      objectReference: {fileID: 425763095}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[8]'
+      value: 
+      objectReference: {fileID: 139149426}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[9]'
+      value: 
+      objectReference: {fileID: 118586220}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
       propertyPath: _circleHerdingStrategy.Pen.CenterOfPen
       value: 
       objectReference: {fileID: 228051186}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1183576015}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[11]'
+      value: 
+      objectReference: {fileID: 562471689}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1238434713}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1818079217}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[14]'
+      value: 
+      objectReference: {fileID: 1891303539}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: '_strategyFactory._sheep.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1417284011}
     - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
       propertyPath: _circleHerdingStrategy.Sheep.Array.size
       value: 16
