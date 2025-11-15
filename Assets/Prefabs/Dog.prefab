@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2860584085888790218}
   - component: {fileID: 277421822705122617}
-  - component: {fileID: 4248284362316002996}
+  - component: {fileID: 1294013359569257796}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -47,16 +47,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a023868d13b42378f589b98dac7ed2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DogAi
-  _circleHerdingStrategy:
-    Dog: {fileID: 2860584085888790218}
-    Sheep: []
-    Pen:
+  _commandRegistry: {fileID: 0}
+  _strategyFactory:
+    _dog: {fileID: 0}
+    _man: {fileID: 0}
+    _sheep: []
+    _pen:
       CenterOfPen: {fileID: 0}
-      PenRadius: 5
-    DogMoveSpeed: 1
-    DogTurnSpeed: 1
---- !u!135 &4248284362316002996
-SphereCollider:
+      PenRadius: 10
+    _dogConfig:
+      MoveSpeed: 0
+      TurnSpeed: 0
+--- !u!65 &1294013359569257796
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -74,8 +77,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.90794754, z: 1.4747975}
+  m_Center: {x: 0, y: 0.5062892, z: -0.014534622}
 --- !u!1 &3066278321062514155
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +90,6 @@ GameObject:
   - component: {fileID: 7482368521992001582}
   - component: {fileID: 4715560947360907938}
   - component: {fileID: 4762060382252279915}
-  - component: {fileID: 2480938187321238814}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -166,29 +168,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2480938187321238814
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3066278321062514155}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4046402576099111296
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +179,6 @@ GameObject:
   - component: {fileID: 3886895924298303002}
   - component: {fileID: 6609386968256653419}
   - component: {fileID: 5151415292090587145}
-  - component: {fileID: 4515032057241154034}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -279,29 +257,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4515032057241154034
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4046402576099111296}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5722601776401748319
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +268,6 @@ GameObject:
   - component: {fileID: 7249522644181509342}
   - component: {fileID: 8429242759095496840}
   - component: {fileID: 2494142383318780369}
-  - component: {fileID: 6471785680581124747}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -330,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 5722601776401748319}
   serializedVersion: 2
   m_LocalRotation: {x: -0.10389648, y: -0, z: -0, w: 0.9945882}
-  m_LocalPosition: {x: -0.04, y: 0.356, z: -0.33000004}
+  m_LocalPosition: {x: 0, y: 0.356, z: -0.33000004}
   m_LocalScale: {x: 0.46117967, y: 0.42175478, z: 0.75152314}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,27 +346,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6471785680581124747
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5722601776401748319}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6659872037254659272
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +357,6 @@ GameObject:
   - component: {fileID: 5522036481132818121}
   - component: {fileID: 1625169992785106394}
   - component: {fileID: 3088581567647589926}
-  - component: {fileID: 2817705857619586032}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -441,7 +373,7 @@ Transform:
   m_GameObject: {fileID: 6659872037254659272}
   serializedVersion: 2
   m_LocalRotation: {x: 0.03997994, y: -0, z: -0, w: 0.99920046}
-  m_LocalPosition: {x: -0.04, y: 0.506, z: 0.44}
+  m_LocalPosition: {x: 0, y: 0.506, z: 0.44}
   m_LocalScale: {x: 0.33481646, y: 0.30619404, z: 0.40316996}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -505,24 +437,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2817705857619586032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6659872037254659272}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
