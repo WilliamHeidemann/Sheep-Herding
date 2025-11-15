@@ -1,9 +1,8 @@
-using System;
 using Models;
 using UnityEngine;
 using Utility;
 
-namespace DogAi
+namespace DogAi.Strategies
 {
     public class ReturnStrategy : IHerdingStrategy
     {
@@ -20,7 +19,7 @@ namespace DogAi
 
         public void Execute()
         {
-            var rightOfMan = _man.position + _man.right * 2f;
+            Vector3 rightOfMan = _man.position + _man.right * 2f;
 
             Debug.DrawLine(_dog.position, rightOfMan, Color.black);
             

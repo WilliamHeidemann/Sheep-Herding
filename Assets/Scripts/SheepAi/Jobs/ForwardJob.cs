@@ -11,9 +11,11 @@ namespace SheepAi.Jobs
 
         public void Execute(int index, TransformAccess transform)
         {
-            var forward = transform.rotation * Vector3.forward * ForwardWeight;
-            Debug.DrawLine(transform.position, transform.position + forward, Color.green);
+            Vector3 forward = transform.rotation * Vector3.forward * ForwardWeight;
+
             Targets[index] += forward;
+            
+            Debug.DrawLine(transform.position, transform.position + forward, Color.green);
         }
     }
 }

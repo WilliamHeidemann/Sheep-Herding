@@ -7,22 +7,22 @@ namespace DogAi
         [SerializeField] private CommandRegistry _commandRegistry;
         [SerializeField] private StrategyFactory _strategyFactory;
 
-        public IHerdingStrategy HerdingStrategy;
+        private IHerdingStrategy _herdingStrategy;
 
         private void Awake()
         {
-            HerdingStrategy = _strategyFactory.CreateStrategy(Command.Return);
+            _herdingStrategy = _strategyFactory.CreateStrategy(Command.Return);
             _commandRegistry.Subscribe(ReadCommand);
         }
 
         private void ReadCommand(Command command)
         {
-            HerdingStrategy = _strategyFactory.CreateStrategy(command);
+            _herdingStrategy = _strategyFactory.CreateStrategy(command);
         }
 
         private void Update()
         {
-            HerdingStrategy.Execute();
+            _herdingStrategy.Execute();
         }
     
         private void OnDestroy()

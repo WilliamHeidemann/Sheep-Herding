@@ -16,19 +16,14 @@ namespace DogAi
 
         public IHerdingStrategy CreateStrategy(Command command)
         {
-            switch (command)
+            return command switch
             {
-                case Command.Chase:
-                    return new ChaseStrategy(_dog, _sheep, _pen, _dogConfig);
-                case Command.Circle:
-                    return new CircleHerdingStrategy(_dog, _sheep, _pen, _dogConfig);
-                case Command.Wait:
-                    return new StopStrategy();
-                case Command.Return:
-                    return new ReturnStrategy(_dog, _man, _dogConfig);
-                default:
-                    throw new System.ArgumentOutOfRangeException(nameof(command), command, null);
-            }
+                Command.Chase => new ChaseStrategy(_dog, _sheep, _pen, _dogConfig),
+                Command.Circle => new CircleHerdingStrategy(_dog, _sheep, _pen, _dogConfig),
+                Command.Wait => new StopStrategy(),
+                Command.Return => new ReturnStrategy(_dog, _man, _dogConfig),
+                _ => throw new System.ArgumentOutOfRangeException(nameof(command), command, null)
+            };
         }
     }
 }

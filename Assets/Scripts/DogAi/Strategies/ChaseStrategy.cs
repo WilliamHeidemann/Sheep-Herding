@@ -23,12 +23,12 @@ namespace DogAi.Strategies
 
         public void Execute()
         {
-            var furthestFromPen = _sheep
+            Transform furthestFromPen = _sheep
                 .MaxBy(sheep => Vector3.Distance(sheep.position, _pen.CenterOfPen.position));
             
-            var offset = (furthestFromPen.position - _pen.CenterOfPen.position).normalized * 2f;
+            Vector3 offset = (furthestFromPen.position - _pen.CenterOfPen.position).normalized * 2f;
             
-            var targetPosition = furthestFromPen.position + offset;
+            Vector3 targetPosition = furthestFromPen.position + offset;
             
             Debug.DrawLine(_dog.position, targetPosition, Color.black);
             

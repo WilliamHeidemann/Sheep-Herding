@@ -12,7 +12,7 @@ namespace View
         private void Awake()
         {
             _uiDocument = GetComponent<UIDocument>();
-            var root = _uiDocument.rootVisualElement;
+            VisualElement root = _uiDocument.rootVisualElement;
 
             var buttons = root.Query<Button>().ToList();
             buttons[0].clicked += ButtonOne;
