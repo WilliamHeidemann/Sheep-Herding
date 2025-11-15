@@ -1,4 +1,4 @@
-namespace DogAi
+namespace DogAi.Strategies
 {
     public interface IHerdingStrategy
     {
