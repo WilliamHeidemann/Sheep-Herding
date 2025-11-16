@@ -11,7 +11,7 @@ namespace Utility.ExtensionMethods
             foreach (var item in source)
             {
                 float value = selector(item);
-                if (value < minValue)
+                if (value <= minValue)
                 {
                     minValue = value;
                     minItem = item;
@@ -27,7 +27,7 @@ namespace Utility.ExtensionMethods
             foreach (var item in source)
             {
                 float value = selector(item);
-                if (value > maxValue)
+                if (value >= maxValue)
                 {
                     maxValue = value;
                     maxItem = item;
