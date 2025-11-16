@@ -1,6 +1,6 @@
 namespace SheepAi.Behaviours
 {
-    public class HerdedBehaviour : ISheepBehaviour
+    public class FleeBehaviour : ISheepBehaviour
     {
         public void Execute()
         {
