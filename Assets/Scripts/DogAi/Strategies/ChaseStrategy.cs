@@ -32,11 +32,11 @@ namespace DogAi.Strategies
             if (Vector3.Distance(_dog.position, targetPosition) < 1f)
             {
                 Vector3 targetRotation = furthestFromPen.position - _dog.position;
-                _dog.RotateTowards(targetRotation, _dogConfiguration.TurnSpeed);
+                _dog.RotateTowards(targetRotation, _dogConfiguration.BaseTurnSpeed);
             }
             else
             {
-                _dog.MoveTowards(targetPosition, _dogConfiguration.MoveSpeed, _dogConfiguration.TurnSpeed);
+                _dog.MoveTowards(targetPosition, _dogConfiguration.BaseMoveSpeed, _dogConfiguration.BaseTurnSpeed);
             }
             
             Debug.DrawLine(_dog.position, targetPosition, Color.black);

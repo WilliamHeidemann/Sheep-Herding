@@ -5,6 +5,7 @@ namespace DogAi
         Circle,
         Chase,
         Wait,
-        Return
+        Return,
+        FollowSheep
     }
 }

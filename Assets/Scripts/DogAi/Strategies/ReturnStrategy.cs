@@ -23,11 +23,11 @@ namespace DogAi.Strategies
             
             if (Vector3.Distance(_dog.position, rightOfMan) < 1f)
             {
-                _dog.RotateTowards(_man.rotation, _dogConfiguration.TurnSpeed);
+                _dog.RotateTowards(_man.rotation, _dogConfiguration.BaseTurnSpeed);
             }
             else
             {
-                _dog.MoveTowards(rightOfMan, _dogConfiguration.MoveSpeed, _dogConfiguration.TurnSpeed);
+                _dog.MoveTowards(rightOfMan, _dogConfiguration.BaseMoveSpeed, _dogConfiguration.BaseTurnSpeed);
             }
             
             Debug.DrawLine(_dog.position, rightOfMan, Color.black);

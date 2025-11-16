@@ -13,7 +13,7 @@ namespace DogAi
         [SerializeField] private Transform _man;
         [SerializeField] private Transform[] _sheep;
         [SerializeField] private Pen _pen;
-        [FormerlySerializedAs("_dogConfig")] [SerializeField] private DogConfiguration _dogConfiguration;
+        [SerializeField] private DogConfiguration _dogConfiguration;
 
         public IHerdingStrategy CreateStrategy(Command command)
         {
@@ -23,6 +23,7 @@ namespace DogAi
                 Command.Circle => new CircleHerdingStrategy(_dog, _sheep, _pen, _dogConfiguration),
                 Command.Wait => new StopStrategy(),
                 Command.Return => new ReturnStrategy(_dog, _man, _dogConfiguration),
+                Command.FollowSheep => new FollowSheepStrategy(_dog, _sheep[0], _dogConfiguration),
                 _ => throw new System.ArgumentOutOfRangeException(nameof(command), command, null)
             };
         }
