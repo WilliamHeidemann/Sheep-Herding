@@ -19,6 +19,9 @@ namespace View
             buttons[1].clicked += ButtonTwo;
             buttons[2].clicked += ButtonThree;
             buttons[3].clicked += ButtonFour;
+            buttons[4].clicked += ButtonFive;
+            buttons[5].clicked += ButtonSix;
+            buttons[6].clicked += ButtonSeven;
         }
         
         private void ButtonOne()
@@ -39,6 +42,21 @@ namespace View
         private void ButtonFour()
         {
             _commandRegistry.IssueCommand(Command.Return);
+        }
+
+        private void ButtonFive()
+        {
+            
+        }
+        
+        private void ButtonSix()
+        {
+            
+        }
+        
+        private void ButtonSeven()
+        {
+            
         }
     }
 }
