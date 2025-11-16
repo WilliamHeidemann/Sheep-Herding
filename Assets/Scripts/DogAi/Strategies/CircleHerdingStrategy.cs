@@ -1,7 +1,7 @@
 using System.Linq;
 using Models;
 using UnityEngine;
-using Utility;
+using Utility.ExtensionMethods;
 
 namespace DogAi.Strategies
 {

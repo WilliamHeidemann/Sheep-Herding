@@ -2,7 +2,7 @@ using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Jobs;
-using Utility;
+using Utility.ExtensionMethods;
 
 namespace SheepAi.Jobs
 {
