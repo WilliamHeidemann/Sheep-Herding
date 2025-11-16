@@ -1,10 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Jobs;
 
-namespace Utility
+namespace Utility.ExtensionMethods
 {
-    public static class ExtensionMethods
+    public static class TransformExtensions
     {
         public static void MoveTowards(this Transform transform, Vector3 target, float moveSpeed,
             float turnSpeed)
@@ -32,38 +31,6 @@ namespace Utility
         {
             Quaternion targetRotation = Quaternion.LookRotation(target);
             transform.RotateTowards(targetRotation, turnSpeed);
-        }
-        
-        public static T MinBy<T>(this IEnumerable<T> source, System.Func<T, float> selector)
-        {
-            T minItem = default;
-            float minValue = float.MaxValue;
-            foreach (var item in source)
-            {
-                float value = selector(item);
-                if (value < minValue)
-                {
-                    minValue = value;
-                    minItem = item;
-                }
-            }
-            return minItem;
-        }
-        
-        public static T MaxBy<T>(this IEnumerable<T> source, System.Func<T, float> selector)
-        {
-            T maxItem = default;
-            float maxValue = float.MinValue;
-            foreach (var item in source)
-            {
-                float value = selector(item);
-                if (value > maxValue)
-                {
-                    maxValue = value;
-                    maxItem = item;
-                }
-            }
-            return maxItem;
         }
     }
 }
