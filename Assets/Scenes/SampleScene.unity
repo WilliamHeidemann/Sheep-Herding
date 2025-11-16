@@ -3271,6 +3271,14 @@ PrefabInstance:
       propertyPath: '_circleHerdingStrategy.Sheep.Array.data[15]'
       value: 
       objectReference: {fileID: 1417284011}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dogConfiguration.MoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dogConfiguration.TurnSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2860584085888790218, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.32

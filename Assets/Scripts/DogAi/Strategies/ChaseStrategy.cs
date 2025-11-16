@@ -11,14 +11,14 @@ namespace DogAi.Strategies
         private readonly Transform _dog;
         private readonly Transform[] _sheep;
         private readonly Pen _pen;
-        private readonly DogConfig _dogConfig;
+        private readonly DogConfiguration _dogConfiguration;
 
-        public ChaseStrategy(Transform dog, Transform[] sheep, Pen pen, DogConfig dogConfig)
+        public ChaseStrategy(Transform dog, Transform[] sheep, Pen pen, DogConfiguration dogConfiguration)
         {
             _dog = dog;
             _sheep = sheep;
             _pen = pen;
-            _dogConfig = dogConfig;
+            _dogConfiguration = dogConfiguration;
         }
 
         public void Execute()
@@ -27,20 +27,19 @@ namespace DogAi.Strategies
                 .MaxBy(sheep => Vector3.Distance(sheep.position, _pen.CenterOfPen.position));
             
             Vector3 offset = (furthestFromPen.position - _pen.CenterOfPen.position).normalized * 2f;
-            
             Vector3 targetPosition = furthestFromPen.position + offset;
-            
-            Debug.DrawLine(_dog.position, targetPosition, Color.black);
             
             if (Vector3.Distance(_dog.position, targetPosition) < 1f)
             {
                 Vector3 targetRotation = furthestFromPen.position - _dog.position;
-                _dog.RotateTowards(targetRotation, _dogConfig.TurnSpeed);
+                _dog.RotateTowards(targetRotation, _dogConfiguration.TurnSpeed);
             }
             else
             {
-                _dog.MoveTowards(targetPosition, _dogConfig.MoveSpeed, _dogConfig.TurnSpeed);
+                _dog.MoveTowards(targetPosition, _dogConfiguration.MoveSpeed, _dogConfiguration.TurnSpeed);
             }
+            
+            Debug.DrawLine(_dog.position, targetPosition, Color.black);
         }
     }
 }

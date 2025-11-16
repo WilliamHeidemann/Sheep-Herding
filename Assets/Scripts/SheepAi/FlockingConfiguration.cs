@@ -16,8 +16,8 @@ namespace SheepAi
         public float AlignmentWeight;
         public float SeparationWeight;
 
-        [Header("Speed Modifiers")]
-        public float MoveSpeedModifier;
-        public float TurnSpeedModifier;
+        [Header("Speed")]
+        public float MoveSpeed;
+        public float TurnSpeed;
     }
 }

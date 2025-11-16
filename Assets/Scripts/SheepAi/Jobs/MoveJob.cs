@@ -9,8 +9,8 @@ namespace SheepAi.Jobs
     public struct MoveJob : IJobParallelForTransform
     {
         public float DeltaTime;
-        public float MoveSpeedModifier;
-        public float TurnSpeedModifier;
+        public float MoveSpeed;
+        public float TurnSpeed;
         public NativeArray<Vector3> Targets;
 
         public void Execute(int index, TransformAccess transform)
@@ -18,8 +18,8 @@ namespace SheepAi.Jobs
             Vector3 target = Targets[index];
 
             float distance = math.length(target);
-            float turnSpeed = distance * TurnSpeedModifier * DeltaTime;
-            float moveSpeed = distance * MoveSpeedModifier * DeltaTime;
+            float turnSpeed = distance * TurnSpeed * DeltaTime;
+            float moveSpeed = distance * MoveSpeed * DeltaTime;
             
             transform.MoveTowards(target, moveSpeed, turnSpeed);
             

@@ -8,29 +8,29 @@ namespace DogAi.Strategies
     {
         private readonly Transform _dog;
         private readonly Transform _man;
-        private readonly DogConfig _dogConfig;
+        private readonly DogConfiguration _dogConfiguration;
 
-        public ReturnStrategy(Transform dog, Transform man, DogConfig dogConfig)
+        public ReturnStrategy(Transform dog, Transform man, DogConfiguration dogConfiguration)
         {
             _dog = dog;
             _man = man;
-            _dogConfig = dogConfig;
+            _dogConfiguration = dogConfiguration;
         }
 
         public void Execute()
         {
             Vector3 rightOfMan = _man.position + _man.right * 2f;
-
-            Debug.DrawLine(_dog.position, rightOfMan, Color.black);
             
             if (Vector3.Distance(_dog.position, rightOfMan) < 1f)
             {
-                _dog.RotateTowards(_man.rotation, _dogConfig.TurnSpeed);
+                _dog.RotateTowards(_man.rotation, _dogConfiguration.TurnSpeed);
             }
             else
             {
-                _dog.MoveTowards(rightOfMan, _dogConfig.MoveSpeed, _dogConfig.TurnSpeed);
+                _dog.MoveTowards(rightOfMan, _dogConfiguration.MoveSpeed, _dogConfiguration.TurnSpeed);
             }
+            
+            Debug.DrawLine(_dog.position, rightOfMan, Color.black);
         }
     }
 }

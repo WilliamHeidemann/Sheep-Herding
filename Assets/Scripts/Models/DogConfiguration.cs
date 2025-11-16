@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Models
 {
     [Serializable]
-    public class DogConfig
+    public class DogConfiguration
     {
         public float MoveSpeed;
         public float TurnSpeed;

@@ -70,8 +70,8 @@ namespace SheepAi
             {
                 DeltaTime = Time.deltaTime,
                 Targets = _targets,
-                MoveSpeedModifier = _moveSpeed,
-                TurnSpeedModifier = _turnSpeed
+                MoveSpeed = _moveSpeed,
+                TurnSpeed = _turnSpeed
             };
 
             JobHandle flockingHandle = flockingJob.Schedule(_transformAccessArray);
