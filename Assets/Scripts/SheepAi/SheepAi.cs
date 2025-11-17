@@ -10,14 +10,8 @@ namespace SheepAi
     {
         [SerializeField] private Transform[] _sheep;
         [SerializeField] private Transform _dog;
-        [SerializeField] private float _forwardWeight = 1f;
-        [SerializeField] private float _flockingRadius = 5f;
-        [SerializeField] private float _cohesionWeight = 1f;
-        [SerializeField] private float _alignmentWeight = 1f;
-        [SerializeField] private float _separationWeight = 1f;
-        [SerializeField] private float _dogSeparationDistance = 8f;
-        [SerializeField] private float _moveSpeed = 1f;
-        [SerializeField] private float _turnSpeed = 1f;
+
+        [SerializeField] private FlockingConfiguration _flockingConfiguration;
     
         private TransformAccessArray _transformAccessArray;
         private NativeArray<Vector3> _positions;
@@ -46,38 +40,31 @@ namespace SheepAi
                 Positions = _positions,
                 Directions = _directions,
                 Targets = _targets,
-                FlockingRadius = _flockingRadius,
-                CohesionWeight = _cohesionWeight,
-                AlignmentWeight = _alignmentWeight,
-                SeparationWeight = _separationWeight,
-                SheepSeparationDistance = _flockingRadius / 3f
+                FlockingRadius = _flockingConfiguration.SheepViewRadius,
+                CohesionWeight = _flockingConfiguration.CohesionWeight,
+                AlignmentWeight = _flockingConfiguration.AlignmentWeight,
+                SeparationWeight = _flockingConfiguration.SeparationWeight,
+                SheepSeparationDistance = _flockingConfiguration.SheepSeparationRadius
             };
 
             var avoidDogJob = new AvoidDogJob
             {
                 Targets = _targets,
-                DogSeparationDistance = _dogSeparationDistance,
+                DogSeparationDistance = _flockingConfiguration.DogViewRadius,
                 DogPosition = _dog.position
-            };
-
-            var forwardJob = new ForwardJob
-            {
-                Targets = _targets,
-                ForwardWeight = _forwardWeight
             };
 
             var moveJob = new MoveJob
             {
                 DeltaTime = Time.deltaTime,
                 Targets = _targets,
-                MoveSpeed = _moveSpeed,
-                TurnSpeed = _turnSpeed
+                MoveSpeed = _flockingConfiguration.MoveSpeed,
+                TurnSpeed = _flockingConfiguration.TurnSpeed
             };
 
             JobHandle flockingHandle = flockingJob.Schedule(_transformAccessArray);
             JobHandle avoidDogHandle = avoidDogJob.Schedule(_transformAccessArray, flockingHandle);
-            JobHandle forwardHandle = forwardJob.Schedule(_transformAccessArray, avoidDogHandle);
-            JobHandle moveHandle = moveJob.Schedule(_transformAccessArray, forwardHandle);
+            JobHandle moveHandle = moveJob.Schedule(_transformAccessArray, avoidDogHandle);
             moveHandle.Complete();
         }
 

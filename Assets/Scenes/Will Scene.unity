@@ -277,123 +277,123 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 0.5
+        x: 0.99993396
         y: 0
-        z: -0.5
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 1
-          z: 0
-          w: -0.000000014901163
-    - Position:
-        x: 0.5
-        y: 0
-        z: 0.5
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -0.5
-        y: 0
-        z: 0.5
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: -0.5
-        y: 0
-        z: -0.5
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: 0.1
-        y: 0
-        z: -0.5
-      TangentIn:
-        x: 0
-        y: 0
-        z: 0
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0
-      Rotation:
-        value:
-          x: 0
-          y: 0
-          z: 0
-          w: 1
-    - Position:
-        x: 0.1
-        y: 0
-        z: 0
+        z: -0.32261539
       TangentIn:
         x: -0
         y: -0
-        z: -0.05
+        z: -0.09626162
       TangentOut:
         x: 0
         y: 0
-        z: 0.05
+        z: 0.09626162
       Rotation:
         value:
           x: 0
-          y: 0
+          y: -0.2696645
+          z: -0
+          w: 0.96295434
+    - Position:
+        x: 0.5
+        y: 0
+        z: 0.5
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.2823337
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.28776377
+      Rotation:
+        value:
+          x: 0
+          y: -0.50486135
+          z: -0
+          w: 0.86320037
+    - Position:
+        x: -0.5
+        y: 0
+        z: 0.5
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.23570228
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.23570228
+      Rotation:
+        value:
+          x: 0
+          y: 0.92387956
           z: 0
-          w: 1
+          w: -0.38268346
+    - Position:
+        x: -0.5
+        y: 0
+        z: -0.5
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.19347498
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.122776225
+      Rotation:
+        value:
+          x: 0
+          y: 0.9347564
+          z: 0
+          w: 0.3552892
+    - Position:
+        x: -0.10009822
+        y: 0
+        z: -0.5473691
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.10055421
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.112706095
+      Rotation:
+        value:
+          x: 0
+          y: 0.43747878
+          z: 0
+          w: 0.8992287
+    - Position:
+        x: -0.038292617
+        y: 0
+        z: -0.045248747
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.050590985
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.050590985
+      Rotation:
+        value:
+          x: 0
+          y: 0.061198324
+          z: 0
+          w: 0.9981257
     m_MetaData:
-    - Mode: 1
+    - Mode: 0
       Tension: 0.5
-    - Mode: 1
+    - Mode: 0
       Tension: 0.5
-    - Mode: 1
+    - Mode: 0
       Tension: 0.5
-    - Mode: 1
+    - Mode: 0
       Tension: 0.5
-    - Mode: 1
+    - Mode: 0
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
@@ -713,7 +713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137367750}
   m_Layer: 0
-  m_Name: Square Pen
+  m_Name: Pen 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,7 +728,7 @@ Transform:
   m_GameObject: {fileID: 137367749}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.44814, y: 0, z: 12.66488}
+  m_LocalPosition: {x: 3.9, y: 0, z: 18.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -849,9 +849,9 @@ GameObject:
   - component: {fileID: 228051187}
   - component: {fileID: 228051188}
   m_Layer: 0
-  m_Name: Circle Pen
+  m_Name: Pen 0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -884,85 +884,85 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: -4.7429547
+        x: -7.3691535
         y: 0
-        z: -0.00000025289984
+        z: 5.455609
       TangentIn:
-        x: 0
-        y: 0
-        z: -2.6194615
+        x: -0
+        y: -0
+        z: -0.7040944
       TangentOut:
         x: 0
         y: 0
-        z: 2.6194615
+        z: 0.7040944
       Rotation:
         value:
           x: 0
-          y: 0
+          y: 0.6882766
           z: 0
-          w: 1
+          w: 0.7254484
     - Position:
-        x: 0.00000022309752
+        x: -0.3379383
         y: 0
-        z: 4.7429547
+        z: 5.8256154
       TangentIn:
-        x: -4.4015356e-15
-        y: 0
-        z: -2.619461
-      TangentOut:
-        x: 4.4015356e-15
-        y: 0
-        z: 2.619461
-      Rotation:
-        value:
-          x: 0
-          y: 0.70710677
-          z: 0
-          w: 0.70710677
-    - Position:
-        x: 4.7429547
-        y: 0
-        z: -0.00000025289984
-      TangentIn:
-        x: 0
-        y: 0
-        z: -2.6194618
+        x: -0
+        y: -0
+        z: -2.0749762
       TangentOut:
         x: 0
         y: 0
-        z: 2.6194618
+        z: 2.0250437
       Rotation:
         value:
           x: 0
-          y: 0.99999994
+          y: 0.83618426
           z: 0
-          w: 0
+          w: 0.54844856
     - Position:
-        x: -0.0000003423068
+        x: 3.9754057
         y: 0
-        z: -4.7429547
+        z: 0.690681
       TangentIn:
-        x: -2.06249e-14
-        y: 0
-        z: -2.6194613
+        x: -0
+        y: -0
+        z: -2.0501962
       TangentOut:
-        x: 2.06249e-14
+        x: 0
         y: 0
-        z: 2.6194613
+        z: 2.1907923
       Rotation:
         value:
           x: 0
-          y: 0.7071067
+          y: 0.99394256
           z: 0
-          w: -0.7071067
+          w: 0.10990061
+    - Position:
+        x: 2.0203838
+        y: 0
+        z: -6.713012
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.7657466
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.7657466
+      Rotation:
+        value:
+          x: 0
+          y: 0.99168026
+          z: 0
+          w: -0.1287256
     m_MetaData:
-    - Mode: 4
+    - Mode: 0
       Tension: 0.5
-    - Mode: 4
+    - Mode: 0
       Tension: 0.5
-    - Mode: 4
+    - Mode: 0
       Tension: 0.5
-    - Mode: 4
+    - Mode: 0
       Tension: 0.5
     m_Closed: 0
     m_IntData:
@@ -1007,7 +1007,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
@@ -2091,14 +2091,7 @@ MonoBehaviour:
   - {fileID: 1891303539}
   - {fileID: 1417284011}
   _dog: {fileID: 650677558}
-  _forwardWeight: 0
-  _flockingRadius: 4
-  _cohesionWeight: 0.2
-  _alignmentWeight: 0.5
-  _separationWeight: 1
-  _dogSeparationDistance: 12
-  _moveSpeed: 1
-  _turnSpeed: 1
+  _flockingConfiguration: {fileID: 11400000, guid: c0632d81108df5540b19cfbf1b6cec52, type: 2}
 --- !u!1001 &1209111374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2243,7 +2236,7 @@ Transform:
   m_GameObject: {fileID: 1234448543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.03, y: 0, z: -4}
+  m_LocalPosition: {x: -0.25, y: 0, z: -6.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3277,6 +3270,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
       propertyPath: _strategyFactory._dogConfiguration.TurnSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dogConfiguration.BaseMoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 277421822705122617, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
+      propertyPath: _strategyFactory._dogConfiguration.BaseTurnSpeed
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2860584085888790218, guid: aae637e150051ba4ab25ea5f16b6c005, type: 3}
