@@ -21,6 +21,16 @@ namespace Utility.ExtensionMethods
             transform.rotation = Quaternion.LookRotation(newDirection);
             transform.position += newDirection * moveSpeed;
         }
+
+        public static void CircleTowards(this Transform transform, Vector3 target, float moveSpeed, float turnSpeed,
+            bool clockWise)
+        {
+            Vector3 directionToTarget = (target - transform.position).normalized;
+            Vector3 tangentDirection = Vector3.Cross(directionToTarget, Vector3.up).normalized;
+            if (clockWise) tangentDirection = -tangentDirection;
+            Vector3 targetPosition = transform.position + tangentDirection;// * Vector3.Distance(transform.position, target);
+            transform.MoveTowards(targetPosition, moveSpeed, turnSpeed);
+        }
         
         public static void RotateTowards(this Transform transform, Quaternion target, float turnSpeed)
         {

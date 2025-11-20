@@ -6,6 +6,7 @@ namespace DogAi
         Chase,
         Wait,
         Return,
-        FollowSheep
+        FollowSheep,
+        Clockwise,
     }
 }
