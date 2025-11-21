@@ -56,7 +56,7 @@ namespace View
         
         private void ButtonSeven()
         {
-            
+            _commandRegistry.IssueCommand(Command.CounterClockwise);
         }
     }
 }

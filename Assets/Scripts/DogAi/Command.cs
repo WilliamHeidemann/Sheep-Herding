@@ -8,5 +8,6 @@ namespace DogAi
         Return,
         FollowSheep,
         Clockwise,
+        CounterClockwise
     }
 }

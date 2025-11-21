@@ -6,7 +6,7 @@
         <ui:Button text="Wait" class="button-style" />
         <ui:Button text="Return" class="button-style" />
         <ui:Button text="Button1" class="button-style" />
-        <ui:Button text="Button 2" class="button-style" />
-        <ui:Button text="Button 3" class="button-style" />
+        <ui:Button text="&lt;-" class="button-style" />
+        <ui:Button text="-&gt;" class="button-style" />
     </ui:VisualElement>
 </ui:UXML>
