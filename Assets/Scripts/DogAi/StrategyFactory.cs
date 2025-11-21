@@ -23,9 +23,9 @@ namespace DogAi
                 Command.Circle => new CircleHerdingStrategy(_dog, _sheep, _pen, _dogConfiguration),
                 Command.Wait => new StopStrategy(),
                 Command.Return => new ReturnStrategy(_dog, _man, _dogConfiguration),
-                Command.FollowSheep => new FollowSheepStrategy(_dog, _sheep[0], _dogConfiguration),
                 Command.Clockwise => new ArcStrategy(_dog, _sheep, _man, _dogConfiguration, true),
                 Command.CounterClockwise => new ArcStrategy(_dog, _sheep, _man, _dogConfiguration, false),
+                Command.ChaseClosestSheep => new ChaseClosestSheep(_dog, _sheep, _dogConfiguration),
                 _ => throw new System.ArgumentOutOfRangeException(nameof(command), command, null)
             };
         }

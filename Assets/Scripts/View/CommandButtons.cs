@@ -46,7 +46,7 @@ namespace View
 
         private void ButtonFive()
         {
-            _commandRegistry.IssueCommand(Command.FollowSheep);
+            _commandRegistry.IssueCommand(Command.ChaseClosestSheep);
         }
         
         private void ButtonSix()
